@@ -14,18 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "nama" => "Ivan Mahadika Yanuarizqi",
-        "ig" => "ivan.mahadika",
+        "email" => "ivanmahadika@gmail.com",
         "gambar" => "image.jpg"
     ]);
 });
 Route::get('/gallery', function () {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
